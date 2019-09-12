@@ -21,10 +21,10 @@ const BackgroundSection = ({ className, children }) => (
   <StaticQuery
     query={graphql`
       query {
-        desktop: file(relativePath: { eq: "seamless-bg-desktop.jpg" }) {
+        desktop: file(relativePath: { eq: "happy-snowman.png" }) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 4160) {
-              ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            fluid {
+              ...GatsbyImageSharpFluid
             }
           }
         }
@@ -42,7 +42,7 @@ const BackgroundSection = ({ className, children }) => (
               // To style via external CSS see layout.css last examples:
               // className="test"
               fluid={imageData}
-              backgroundColor={`#040e18`}
+              // backgroundColor={`#040e18`}
               // Title get's passed to both container and noscriptImg.
               title="gbitest"
               // You are able to set a classId and style by wrapper (see below or
